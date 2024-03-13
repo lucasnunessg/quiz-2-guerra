@@ -8,6 +8,7 @@ const userModel = (sequelize, DataTypes) => {
     contact: DataTypes.STRING,
     
   }, {
+    tableName: 'User',
     underscored: true,
     timestamps: false,
   });
