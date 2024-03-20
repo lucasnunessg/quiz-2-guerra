@@ -15,8 +15,16 @@ const getByIdAndEmail = async (id, email) => {
   return user;
 };
 
+const userUpdate = async (id, full_name, email, contact) => {
+  const user = await User.update({
+    full_name, email, contact
+  }, { where: { id} })
+  return user;
+};
+
 module.exports = {
   getAll,
   getById,
-  getByIdAndEmail
+  getByIdAndEmail,
+  userUpdate,
 }
